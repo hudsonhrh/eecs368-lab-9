@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Authentication</title>
+</head>
+<body>
+	<label for="password">Enter  your password:</label>
+	<input type="password" id="password">
+	<br>
+	<label for="password-confirm">Confirm your password:</label>
+	<input type="password" id="password-conf">
+	<br>
+	<button onclick="verify()">Submit</button>
+
+	<script>
+		function verify() {
+			var password = document.getElementById("password").value;
+			var passwordConf = document.getElementById("password-conf").value;
+
+			if (password.length < 8) {
+				alert("Make it at least 8 characters long");
+			} else if (password != passwordConf) {
+				alert("Passwords don'y match");
+			} else {
+				alert("Passwords matched. Success!");
+			}
+		}
+	</script>
+</body>
+</html>
+
